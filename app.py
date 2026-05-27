@@ -5,6 +5,7 @@ import pandas as pd
 from data import df, char_df, waveform_data, ap_waveform_data
 
 app = Dash(__name__, suppress_callback_exceptions=True)
+server = app.server
 
 MODELS = [f"Model {i+1}" for i in range(15)]
 df["Model"] = df["Model"].replace({f"Model {chr(65+i)}": f"Model {i+1}" for i in range(15)})
