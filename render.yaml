@@ -3,7 +3,7 @@ services:
     name: footwear-wearable-dashboard
     runtime: python
     buildCommand: pip install --no-cache-dir -r requirements.txt
-    startCommand: .venv/bin/gunicorn app:server
+    startCommand: bash -c "source .venv/bin/activate && gunicorn app:server"
     envVars:
       - key: PYTHON_VERSION
         value: 3.12.10
