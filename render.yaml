@@ -2,7 +2,7 @@ services:
   - type: web
     name: footwear-wearable-dashboard
     runtime: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install --no-cache-dir -r requirements.txt
     startCommand: python -m gunicorn app:server
     envVars:
       - key: PYTHON_VERSION
